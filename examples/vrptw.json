@@ -1,0 +1,76 @@
+{
+  "depots": [
+    {
+      "id": "depot",
+      "name": "配送中心",
+      "lat": 31.2304,
+      "lon": 121.4737
+    }
+  ],
+  "stops": [
+    {
+      "id": "s1",
+      "name": "静安",
+      "lat": 31.24,
+      "lon": 121.45,
+      "demand": 10,
+      "service_time": 300,
+      "time_window": [0, 7200]
+    },
+    {
+      "id": "s2",
+      "name": "黄浦",
+      "lat": 31.225,
+      "lon": 121.485,
+      "demand": 15,
+      "service_time": 300,
+      "time_window": [1800, 9000]
+    },
+    {
+      "id": "s3",
+      "name": "浦东",
+      "lat": 31.235,
+      "lon": 121.515,
+      "demand": 20,
+      "service_time": 600,
+      "time_window": [3600, 14400]
+    },
+    {
+      "id": "s4",
+      "name": "虹口",
+      "lat": 31.26,
+      "lon": 121.48,
+      "demand": 5,
+      "service_time": 300,
+      "time_window": [7200, 18000]
+    },
+    {
+      "id": "s5",
+      "name": "徐汇",
+      "lat": 31.195,
+      "lon": 121.44,
+      "demand": 12,
+      "service_time": 300,
+      "time_window": [0, 14400]
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "van-1",
+      "start_depot": "depot",
+      "capacity": 40,
+      "time_window": [0, 28800],
+      "fixed_cost": 100
+    },
+    {
+      "id": "van-2",
+      "start_depot": "depot",
+      "capacity": 40,
+      "time_window": [0, 28800],
+      "fixed_cost": 100
+    }
+  ],
+  "solver": {
+    "time_limit_seconds": 5.0
+  }
+}

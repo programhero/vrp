@@ -1,0 +1,78 @@
+{
+  "depots": [
+    {
+      "id": "depot",
+      "name": "配送中心",
+      "lat": 31.2304,
+      "lon": 121.4737
+    }
+  ],
+  "stops": [
+    {
+      "id": "p1",
+      "name": "取货点 A",
+      "lat": 31.238,
+      "lon": 121.49,
+      "service_time": 120,
+      "time_window": [0, 10000]
+    },
+    {
+      "id": "d1",
+      "name": "送货点 A",
+      "lat": 31.22,
+      "lon": 121.51,
+      "service_time": 120,
+      "time_window": [0, 28800]
+    },
+    {
+      "id": "p2",
+      "name": "取货点 B",
+      "lat": 31.245,
+      "lon": 121.45,
+      "service_time": 120,
+      "time_window": [0, 10000]
+    },
+    {
+      "id": "d2",
+      "name": "送货点 B",
+      "lat": 31.195,
+      "lon": 121.44,
+      "service_time": 120,
+      "time_window": [0, 28800]
+    },
+    {
+      "id": "c1",
+      "name": "普通配送点",
+      "lat": 31.235,
+      "lon": 121.5,
+      "demand": 4,
+      "service_time": 120
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "van-1",
+      "start_depot": "depot",
+      "capacity": 15,
+      "time_window": [0, 28800],
+      "fixed_cost": 150
+    }
+  ],
+  "shipments": [
+    {
+      "id": "shipment-a",
+      "pickup": "p1",
+      "delivery": "d1",
+      "demand": 8
+    },
+    {
+      "id": "shipment-b",
+      "pickup": "p2",
+      "delivery": "d2",
+      "demand": 5
+    }
+  ],
+  "solver": {
+    "time_limit_seconds": 5.0
+  }
+}

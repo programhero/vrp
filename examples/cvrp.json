@@ -1,0 +1,85 @@
+{
+  "depots": [
+    {
+      "id": "depot",
+      "name": "上海中心仓",
+      "lat": 31.2304,
+      "lon": 121.4737
+    }
+  ],
+  "stops": [
+    {
+      "id": "c1",
+      "name": "人民广场",
+      "lat": 31.238,
+      "lon": 121.49,
+      "demand": 20,
+      "service_time": 300
+    },
+    {
+      "id": "c2",
+      "name": "虹口",
+      "lat": 31.26,
+      "lon": 121.48,
+      "demand": 15,
+      "service_time": 300
+    },
+    {
+      "id": "c3",
+      "name": "浦东",
+      "lat": 31.235,
+      "lon": 121.515,
+      "demand": 25,
+      "service_time": 300
+    },
+    {
+      "id": "c4",
+      "name": "黄浦",
+      "lat": 31.215,
+      "lon": 121.485,
+      "demand": 10,
+      "service_time": 300
+    },
+    {
+      "id": "c5",
+      "name": "普陀",
+      "lat": 31.25,
+      "lon": 121.44,
+      "demand": 18,
+      "service_time": 300
+    },
+    {
+      "id": "c6",
+      "name": "长宁",
+      "lat": 31.21,
+      "lon": 121.44,
+      "demand": 22,
+      "service_time": 300
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "truck-1",
+      "start_depot": "depot",
+      "capacity": 60,
+      "time_window": [0, 28800],
+      "fixed_cost": 200
+    },
+    {
+      "id": "truck-2",
+      "start_depot": "depot",
+      "capacity": 60,
+      "time_window": [0, 28800],
+      "fixed_cost": 200,
+      "cost_multiplier": 1.1
+    }
+  ],
+  "objective": {
+    "distance": 1.0,
+    "duration": 0.0
+  },
+  "solver": {
+    "time_limit_seconds": 5.0,
+    "local_search_metaheuristic": "GUIDED_LOCAL_SEARCH"
+  }
+}
